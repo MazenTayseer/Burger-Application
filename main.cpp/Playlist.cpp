@@ -15,6 +15,12 @@ void Playlist::edit(int index1, int index2) {
 	list.swap(index1, index2);
 }
 
+Doublelinked Playlist::shuffle() {
+	Doublelinked shuffledPlaylist = list.shuffleList();
+
+	return shuffledPlaylist;
+}
+
 void Playlist::DeletePlaylist() {
 	list.~Doublelinked();
 }

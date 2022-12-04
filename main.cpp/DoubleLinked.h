@@ -114,7 +114,7 @@ public:
 
     void swap(int index1, int index2);
 
-    void shuffleList();
+    Doublelinked shuffleList();
 
 private:
     //------ DATA MEMBERS

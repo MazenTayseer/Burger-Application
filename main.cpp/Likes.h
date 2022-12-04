@@ -5,11 +5,11 @@
 
 using namespace std;
 
-// Playlist_h
-#ifndef Playlist_h
-#define Playlist_h
+// Likes_h
+#ifndef Likes_h
+#define Likes_h
 
-class Playlist
+class Likes
 {
 private:
 	Doublelinked list;
@@ -17,18 +17,16 @@ private:
 	int size;
 
 public:
-	Playlist(string name);
+	Likes();
 
-	void addToPlaylist(string song);
+	void addToLikes(string song);
 
-	void deleteFromPlaylist(int index);
+	void deleteFromLikes(int index);
 
 	Doublelinked shuffle();
 
 	void edit(int index1, int index2);
 
-	void DeletePlaylist();
-
 };
 
-#endif // PlayList_h 
+#endif // Likes_h 

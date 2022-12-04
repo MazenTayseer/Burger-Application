@@ -16,17 +16,17 @@
     <Filter Include="Source Files\Account">
       <UniqueIdentifier>{c26a466b-08ed-4f1b-8e7c-c95751f761fa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Dynamic List">
-      <UniqueIdentifier>{8e069199-4c5a-4559-859c-68bfbe7893fb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Playlist">
       <UniqueIdentifier>{0bf8dd99-7784-41d1-a1df-491610de0283}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Likes">
       <UniqueIdentifier>{3ae3ee4b-e102-406c-bff0-be6060d88173}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\DoubleLinked">
+    <Filter Include="Resource Files\DoubleLinked">
       <UniqueIdentifier>{7c006656-e79d-4daf-9b3d-4a8cbbc21c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Dynamic List">
+      <UniqueIdentifier>{8e069199-4c5a-4559-859c-68bfbe7893fb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,27 +37,33 @@
       <Filter>Source Files\Account</Filter>
     </ClCompile>
     <ClCompile Include="DoubleLinked.cpp">
-      <Filter>Source Files\DoubleLinked</Filter>
+      <Filter>Resource Files\DoubleLinked</Filter>
     </ClCompile>
     <ClCompile Include="DynamicList.cpp">
-      <Filter>Source Files\Dynamic List</Filter>
+      <Filter>Resource Files\Dynamic List</Filter>
     </ClCompile>
     <ClCompile Include="Playlist.cpp">
       <Filter>Source Files\Playlist</Filter>
     </ClCompile>
+    <ClCompile Include="Likes.cpp">
+      <Filter>Source Files\Likes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h">
-      <Filter>Source Files\Account</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DoubleLinked.h">
-      <Filter>Source Files\DoubleLinked</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DynamicList.h">
-      <Filter>Source Files\Dynamic List</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Likes.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Playlist.h">
-      <Filter>Source Files\Playlist</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

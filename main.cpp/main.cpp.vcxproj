@@ -131,6 +131,7 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="DoubleLinked.cpp" />
     <ClCompile Include="DynamicList.cpp" />
+    <ClCompile Include="Likes.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Playlist.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="DoubleLinked.h" />
     <ClInclude Include="DynamicList.h" />
+    <ClInclude Include="Likes.h" />
     <ClInclude Include="Playlist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

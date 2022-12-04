@@ -1,5 +1,9 @@
-#include "Doublelinked.h"
+#include "DoubleLinked.h"
 #include <iostream>
+#include <vector>
+#include <random>
+#include <algorithm>
+
 using namespace std;
 
 Doublelinked::Doublelinked()
@@ -228,4 +232,24 @@ int Doublelinked::nodeCount() {
         ptr = ptr->next;
     }
     return count;
+}
+
+Doublelinked Doublelinked::shuffleList() {
+    Doublelinked shuffledList;
+    vector<ElementType> v;
+
+    NodePointer ptr = first;
+    while (ptr != nullptr) {
+        v.push_back(ptr->data);
+        ptr = ptr->next;
+    }
+
+    srand(time(0));
+    random_shuffle(v.begin(), v.end());
+
+    for (int i = 0; i < v.size(); i++) {
+        shuffledList.push_back(v[i]);
+    }
+
+    return shuffledList;
 }
