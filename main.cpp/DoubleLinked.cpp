@@ -144,8 +144,10 @@ void Doublelinked::erase(int index) {
         first->previous = 0;
     }
     else {
-        for (int i = 0; i < index; i++)
+        for (int i = 0; i < index; i++) {
+            
             ptr = ptr->next;
+        }
         ptrnext = ptr->next;
         ptrprev = ptr->previous;
         ptrprev->next = ptrnext;
