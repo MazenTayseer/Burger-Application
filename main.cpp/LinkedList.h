@@ -1,16 +1,13 @@
-#pragma once
+#ifndef LinkedList_hpp
+#define LinkedList_hpp
 
-
-#ifndef Doublelinked_hpp
-#define Doublelinked_hpp
-
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
-#include "Song.h"
+#include "Playlist.h"
 using namespace std;
-typedef Song SongType;
 
-class Doublelinked
+
+class LinkedList
 {
 private:
 
@@ -18,19 +15,19 @@ private:
     public:
 
         //------ Node DATA MEMBERS
-        SongType data;
+        Playlist data;
         Node* next;
-        Node* previous;
+
         //------ Node OPERATIONS
         //-- Default constrctor: initializes next member to Node()
         Node()
-            : next(0), previous(0)
+            : next(nullptr), data("0")
         {}
 
         //-- Explicit-value constructor:  initializes data member to dataValue
         //--                             and next member to 0
-        Node(SongType dataValue)
-            : data(dataValue), next(0), previous(0)
+        Node(Playlist dataValue)
+            : data(dataValue), next(0)
         {}
     }; //--- end of Node class
 
@@ -38,52 +35,43 @@ private:
 
 public:
     //------ List OPERATIONS
-    Doublelinked();
+    LinkedList();
     /*--------------------------------------------------------------------
      Default constructor: builds an empty List object.
      Precondition:  None
      Postcondition: first is 0 and mySize is 0.
      --------------------------------------------------------------------*/
-    Doublelinked(const Doublelinked& origList);
+    LinkedList(const LinkedList& origList);
     /*--------------------------------------------------------------------
      Copy constructor
      Precondition:  A copy of origList is needed.
      Postcondition: A distincr copy of origList has been constructed.
      --------------------------------------------------------------------*/
-    ~Doublelinked();
+    ~LinkedList();
     /*--------------------------------------------------------------------
      Destructor
      Precondition:  This list's lifetime is over.
      Postcondition: This list has been destroyed.
      --------------------------------------------------------------------*/
-    const Doublelinked& operator=(const Doublelinked& rightSide);
+    const LinkedList& operator=(const LinkedList& rightSide);
     /*--------------------------------------------------------------------
      Assignment operator
      Precondition:  This list must be assigned a value.
      Postcondition: A copy of rightSide has been assigned to this list.
      --------------------------------------------------------------------*/
-    bool empty();
+    bool empty() const;
     /*--------------------------------------------------------------------
      Check if this list is empty
      Precondition:  None.
      Postcondition: true is returned if this list is empty, false if not.
      --------------------------------------------------------------------*/
-    void insert(SongType dataVal, int index);
+    void insert(Playlist dataVal, int index);
     /*--------------------------------------------------------------------
      Insert a value into a list at a given index.
      Precondition:  index is a valid list index: 0 <= index <= mySize,
      Postcondition: dataVal has been inserted into the list at position
      index, provided index is valid..
      --------------------------------------------------------------------*/
-    void push_back(SongType dataVal);
-    /*--------------------------------------------------------------------
-     Insert a value into a list at the end of the list.
-     Precondition:  no precondition,
-     Postcondition: dataVal has been inserted into the list at position
-     index, provided index is valid..
-     --------------------------------------------------------------------*/
-
-
     void erase(int index);
     /*--------------------------------------------------------------------
      Remove a value from a list at a given index.
@@ -91,7 +79,7 @@ public:
      Postcondition: dataVal at list position index has been removed,
      provided index is valid.
      --------------------------------------------------------------------*/
-    int search(SongType dataVal);
+    int search(Playlist dataVal);
     /*--------------------------------------------------------------------
      Search for an data value in this list.
      Precondition:  None
@@ -104,18 +92,15 @@ public:
      Precondition:  ostream out is open
      Postcondition: Elements of this list have been output to out.
      --------------------------------------------------------------------*/
-    int nodeCount();
+    void reverse();
     /*--------------------------------------------------------------------
-     Count the elements of this list.
+     Reverse this list.
      Precondition:  None
-     Postcondition: Number of elements in this list is returned.
+     Postcondition: Elements in this list have been reversed.
      --------------------------------------------------------------------*/
+    void push_back(Playlist dataVal);
 
-    SongType get(int index);
-
-    void swap(int index1, int index2);
-
-    Doublelinked shuffleList();
+    Playlist get(int index);
 
 private:
     //------ DATA MEMBERS
@@ -123,7 +108,8 @@ private:
     int mySize;
 }; //--- end of List class
 
-ostream& operator<<(ostream& out, const Doublelinked& aList);
-istream& operator>>(istream& in, Doublelinked& aList);
+ostream& operator<<(ostream& out, const LinkedList& aList);
+istream& operator>>(istream& in, LinkedList& aList);
 
-#endif /* Doublelinked_h */
+#endif /* List_hpp */
+

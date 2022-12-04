@@ -73,7 +73,7 @@ const Doublelinked& Doublelinked :: operator = (const Doublelinked& rightSide) {
     return *this;
 }
 
-void Doublelinked::insert(ElementType dataVal, int index) {
+void Doublelinked::insert(SongType dataVal, int index) {
     if (index < 0 || index > mySize)
     {
         cerr << "Illegal location to insert -- " << index << endl;
@@ -101,14 +101,16 @@ void Doublelinked::insert(ElementType dataVal, int index) {
 
         newPtr->next = ptr->next;
         newPtr->previous = ptr;
-        if (ptr->next != 0)
+        if (ptr->next != 0) {
             ptr->next->previous = newPtr;
+        }
         ptr->next = newPtr;
     }
 }
 
-void Doublelinked::push_back(ElementType dataVal) {
-    
+
+
+void Doublelinked::push_back(SongType dataVal) {
     Doublelinked::NodePointer newPtr = new Node(dataVal), ptr = first;
     
     if (empty()) {
@@ -134,7 +136,7 @@ void Doublelinked::erase(int index) {
         cerr << "Illegal location to delete -- " << index << endl;
         return;
     }
-    mySize--;
+
     Doublelinked::NodePointer ptr = first, ptrnext, ptrprev;
 
     if (index == 0) {
@@ -151,7 +153,7 @@ void Doublelinked::erase(int index) {
         ptrnext = ptr->next;
         ptrprev = ptr->previous;
 
-        if (index == mySize) {
+        if (index == mySize - 1) {
             ptrprev->next = ptrnext;
         }
         else {
@@ -159,27 +161,17 @@ void Doublelinked::erase(int index) {
             ptrnext->previous = ptrprev;
         }
 
+        mySize--;
         delete ptr;
     }
 }
 
-int Doublelinked::search(ElementType dataVal) {
 
-    Doublelinked::NodePointer ptr = first;
-    for (int i = 0; i < mySize; i++) {
-        if (ptr->data == dataVal)
-            return i + 1;
-        else
-            ptr = ptr->next;
-    }
-    return -1;
-}
-
-string Doublelinked::get(int index) {
+SongType Doublelinked::get(int index) {
     Doublelinked::NodePointer ptr = first;
     if (index >= mySize) {
         cerr << "Index bigger than size" << endl;
-        return "ERROR";
+        exit(1);
     }
 
     for (int i = 0; i < index; i++) {
@@ -188,6 +180,7 @@ string Doublelinked::get(int index) {
 
     return ptr->data;
 }
+
 
 void Doublelinked::swap(int index1, int index2) {
     //string data1 = get(index1);
@@ -209,8 +202,8 @@ void Doublelinked::swap(int index1, int index2) {
         secondElement = secondElement->next;
     }
 
-    string data1 = firstElement->data;
-    string data2 = secondElement->data;
+    SongType data1 = firstElement->data;
+    SongType data2 = secondElement->data;
 
     firstElement->data = data2;
     secondElement->data = data1;
@@ -222,7 +215,7 @@ void Doublelinked::display(ostream& out) const
     Doublelinked::NodePointer ptr = first;
     while (ptr != 0)
     {
-        out << ptr->data << "  ";
+        out << ptr->data.getName() << "  ";
         ptr = ptr->next;
     }
 }
@@ -245,7 +238,7 @@ int Doublelinked::nodeCount() {
 
 Doublelinked Doublelinked::shuffleList() {
     Doublelinked shuffledList;
-    vector<ElementType> v;
+    vector<SongType> v;
 
     NodePointer ptr = first;
     while (ptr != nullptr) {

@@ -25,8 +25,11 @@
     <Filter Include="Resource Files\DoubleLinked">
       <UniqueIdentifier>{7c006656-e79d-4daf-9b3d-4a8cbbc21c2f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\Dynamic List">
-      <UniqueIdentifier>{8e069199-4c5a-4559-859c-68bfbe7893fb}</UniqueIdentifier>
+    <Filter Include="Resource Files\LinkedList">
+      <UniqueIdentifier>{8888aedc-6294-4264-af80-19d5cc015fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Song">
+      <UniqueIdentifier>{33be4ea0-0aaa-4c77-a17d-52901beff3fb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,31 +42,37 @@
     <ClCompile Include="DoubleLinked.cpp">
       <Filter>Resource Files\DoubleLinked</Filter>
     </ClCompile>
-    <ClCompile Include="DynamicList.cpp">
-      <Filter>Resource Files\Dynamic List</Filter>
-    </ClCompile>
     <ClCompile Include="Playlist.cpp">
       <Filter>Source Files\Playlist</Filter>
     </ClCompile>
     <ClCompile Include="Likes.cpp">
       <Filter>Source Files\Likes</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>Resource Files\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="Song.cpp">
+      <Filter>Source Files\Song</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DoubleLinked.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DynamicList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Likes.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Account</Filter>
     </ClInclude>
     <ClInclude Include="Playlist.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Playlist</Filter>
+    </ClInclude>
+    <ClInclude Include="Likes.h">
+      <Filter>Source Files\Likes</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinked.h">
+      <Filter>Resource Files\DoubleLinked</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Resource Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Song.h">
+      <Filter>Source Files\Song</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

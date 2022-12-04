@@ -17,18 +17,6 @@ void songList();
 
 int main()
 {
-	Doublelinked l1;
-	l1.push_back("1");
-	l1.push_back("2");
-	l1.push_back("3");
-	l1.push_back("4");
-	l1.push_back("5");
-	l1.push_back("6");
-
-	l1.erase(5);
-	l1.display(cout);
-
-	cout << endl;
 
 	cout << "WELCOME TO BURGER\n==================" << endl;
 	
@@ -90,7 +78,7 @@ int main()
 			break;
 
 		case 2:
-			bool playing = mciSendString("play DripTooHard.mp3", NULL, 0, NULL);
+			mciSendString("play DripTooHard.mp3", NULL, 0, NULL);
 			while (true) {
 				int command;
 				cout << "1 - Pause" << endl;

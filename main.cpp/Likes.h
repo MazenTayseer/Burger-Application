@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "Song.h"
 #include "DoubleLinked.h"
 
 using namespace std;
@@ -19,7 +20,7 @@ private:
 public:
 	Likes();
 
-	void addToLikes(string song);
+	void addToLikes(Song song);
 
 	void deleteFromLikes(int index);
 

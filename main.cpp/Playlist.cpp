@@ -3,8 +3,8 @@
 Playlist::Playlist(string PlaylistName): name(PlaylistName), size(0), list()
 {}
 
-void Playlist::addToPlaylist(string song) {
-	list.push_back(song);
+void Playlist::addToPlaylist(Song song) {
+	list.push_back(*new Song(song.getName(), song.getDuration()));
 }
 
 void Playlist::deleteFromPlaylist(int index) {
@@ -25,3 +25,6 @@ void Playlist::DeletePlaylist() {
 	list.~Doublelinked();
 }
 
+string Playlist::getPlaylistName() {
+	return name;
+}

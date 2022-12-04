@@ -10,3 +10,14 @@ string Account::getUsername() {
 string Account::getPassword() {
 	return password;
 }
+
+void Account::createPlaylist(string name) {
+	Playlist newPlaylist = *new Playlist(name);
+
+	playlists.push_back(newPlaylist);
+}
+
+Playlist Account::accessPlaylist(int index){
+	Playlist currentPL = playlists.get(index);
+	return currentPL;
+}

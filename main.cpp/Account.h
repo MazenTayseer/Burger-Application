@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "Likes.h"
+#include "LinkedList.h"
 using namespace std;
 
 // Account_h
@@ -14,6 +15,7 @@ private:
 	string username;
 	string password;
 	Likes likes;
+	LinkedList playlists;
 
 public:
 	Account(string username,string password);
@@ -21,6 +23,8 @@ public:
 	string getPassword();
 
 	void createPlaylist(string name);
+
+	Playlist accessPlaylist(int index);
 };
 
 #endif // Account_h 

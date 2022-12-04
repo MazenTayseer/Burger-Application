@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "DoubleLinked.h"
+#include "Song.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ private:
 public:
 	Playlist(string name);
 
-	void addToPlaylist(string song);
+	void addToPlaylist(Song song);
 
 	void deleteFromPlaylist(int index);
 
@@ -28,6 +29,8 @@ public:
 	void edit(int index1, int index2);
 
 	void DeletePlaylist();
+
+	string getPlaylistName();
 
 };
 
