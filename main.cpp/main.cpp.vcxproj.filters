@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Account">
+      <UniqueIdentifier>{c26a466b-08ed-4f1b-8e7c-c95751f761fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dynamic List">
+      <UniqueIdentifier>{8e069199-4c5a-4559-859c-68bfbe7893fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Playlist">
+      <UniqueIdentifier>{0bf8dd99-7784-41d1-a1df-491610de0283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Likes">
+      <UniqueIdentifier>{3ae3ee4b-e102-406c-bff0-be6060d88173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DoubleLinked">
+      <UniqueIdentifier>{7c006656-e79d-4daf-9b3d-4a8cbbc21c2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>Source Files\Account</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinked.cpp">
+      <Filter>Source Files\DoubleLinked</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicList.cpp">
+      <Filter>Source Files\Dynamic List</Filter>
+    </ClCompile>
+    <ClCompile Include="Playlist.cpp">
+      <Filter>Source Files\Playlist</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h">
+      <Filter>Source Files\Account</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinked.h">
+      <Filter>Source Files\DoubleLinked</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicList.h">
+      <Filter>Source Files\Dynamic List</Filter>
+    </ClInclude>
+    <ClInclude Include="Playlist.h">
+      <Filter>Source Files\Playlist</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
