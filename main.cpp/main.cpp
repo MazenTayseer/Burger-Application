@@ -25,6 +25,11 @@ int main()
 	l1.push_back("5");
 	l1.push_back("6");
 
+	l1.erase(5);
+	l1.display(cout);
+
+	cout << endl;
+
 	cout << "WELCOME TO BURGER\n==================" << endl;
 	
 	welcomeScreen: {

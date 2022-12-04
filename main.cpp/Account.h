@@ -20,7 +20,7 @@ public:
 	string getUsername();
 	string getPassword();
 
-
+	void createPlaylist(string name);
 };
 
 #endif // Account_h 
