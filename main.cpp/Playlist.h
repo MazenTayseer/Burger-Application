@@ -18,6 +18,8 @@ private:
 	int size;
 
 public:
+	Playlist();
+
 	Playlist(string name);
 
 	void addToPlaylist(Song song);

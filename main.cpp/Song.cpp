@@ -1,6 +1,8 @@
 #include "Song.h"
 #include <Windows.h>
 
+Song::Song() : inputName("NEW"), name("NEW"), duration("00:00") {}
+
 Song::Song(string inputName, string name, string duration): inputName(inputName), name(name), duration(duration)
 {}
 

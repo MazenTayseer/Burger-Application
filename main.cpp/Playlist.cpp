@@ -1,5 +1,8 @@
 #include "Playlist.h"
 
+Playlist::Playlist() : name("NEW"), size(0), list()
+{}
+
 Playlist::Playlist(string PlaylistName): name(PlaylistName), size(0), list()
 {}
 

@@ -24,7 +24,7 @@ private:
         //------ Node OPERATIONS
         //-- Default constrctor: initializes next member to Node()
         Node()
-            : next(0), previous(0), data("NEW", "NEW", "00:00")
+            : next(0), previous(0)
         {}
 
         //-- Explicit-value constructor:  initializes data member to dataValue
@@ -91,7 +91,7 @@ public:
      Postcondition: dataVal at list position index has been removed,
      provided index is valid.
      --------------------------------------------------------------------*/
-    int search(SongType dataVal);
+    int search(string name);
     /*--------------------------------------------------------------------
      Search for an data value in this list.
      Precondition:  None
@@ -110,6 +110,9 @@ public:
      Precondition:  None
      Postcondition: Number of elements in this list is returned.
      --------------------------------------------------------------------*/
+    SongType next(string currentSong);
+
+    SongType previous(string currentSong);
 
     SongType get(int index);
 

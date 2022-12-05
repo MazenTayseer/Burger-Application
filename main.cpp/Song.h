@@ -15,6 +15,8 @@ private:
 	string duration;
 
 public:
+	Song();
+
 	Song(string inputName, string name, string duration);
 
 	void playSong();

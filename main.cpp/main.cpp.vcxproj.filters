@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Song">
       <UniqueIdentifier>{33be4ea0-0aaa-4c77-a17d-52901beff3fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Queue">
+      <UniqueIdentifier>{8f84d0e1-57c9-47c5-9fd5-92b457054e2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,6 +57,9 @@
     <ClCompile Include="Song.cpp">
       <Filter>Source Files\Song</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Resource Files\Queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h">
@@ -73,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Song.h">
       <Filter>Source Files\Song</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Resource Files\Queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

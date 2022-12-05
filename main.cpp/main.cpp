@@ -5,6 +5,7 @@
 #include "Account.h"
 #include "DoubleLinked.h"
 #include "Song.h"
+#include "Queue.h"
 
 
 using namespace std;

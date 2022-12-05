@@ -134,6 +134,7 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Playlist.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Song.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,7 @@
     <ClInclude Include="Likes.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Playlist.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Song.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

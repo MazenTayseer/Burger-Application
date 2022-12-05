@@ -167,6 +167,40 @@ void Doublelinked::erase(int index) {
 }
 
 
+SongType Doublelinked::next(string currentSong) {
+    NodePointer currentPtr = first;
+    int index = search(currentSong);
+
+    if (index == mySize - 1) {
+        return first->data;
+    }
+
+    for (int i = 0; i <= index; i++) {
+        currentPtr = currentPtr->next;
+    }
+
+    return currentPtr->data;
+}
+
+SongType Doublelinked::previous(string currentSong) {
+    NodePointer currentPtr = first;
+    int index = search(currentSong);
+
+    if (index == 0) {
+        while (currentPtr->next != nullptr) {
+            currentPtr = currentPtr->next;
+        }
+
+        return currentPtr->data;
+    }
+
+    for (int i = 0; i < index; i++) {
+        currentPtr = currentPtr->next;
+    }
+
+    return currentPtr->previous->data;
+}
+
 SongType Doublelinked::get(int index) {
     Doublelinked::NodePointer ptr = first;
     if (index >= mySize) {
@@ -180,6 +214,19 @@ SongType Doublelinked::get(int index) {
 
     return ptr->data;
 }
+
+int Doublelinked::search(string name) {
+
+    Doublelinked::NodePointer ptr = first;
+    for (int i = 0; i < mySize; i++) {
+        if (ptr->data.getName() == name)
+            return i;
+        else
+            ptr = ptr->next;
+    }
+    return -1;
+}
+
 
 
 void Doublelinked::swap(int index1, int index2) {
