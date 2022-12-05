@@ -24,6 +24,14 @@ void Song::resumeSong() {
 	mciSendString(lpstr, NULL, 0, NULL);
 }
 
+void Song::nextSong(Song song, Playlist currentList) {
+	currentList.getList().next(song.getName());
+}
+
+void Song::previousSong(Song song, Playlist currentList) {
+	currentList.getList().previous(song.getName());
+}
+
 string Song::getName() {
 	return name;
 }

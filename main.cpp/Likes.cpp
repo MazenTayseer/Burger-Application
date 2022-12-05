@@ -21,4 +21,8 @@ Doublelinked Likes::shuffle() {
 	return shuffledPlaylist;
 }
 
+Doublelinked Likes::getList() {
+	return list;
+}
+
 

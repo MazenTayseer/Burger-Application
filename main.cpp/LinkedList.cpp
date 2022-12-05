@@ -155,7 +155,7 @@ void LinkedList::reverse() {
         prevP = currentP;
         currentP = nextP;
     }
-    first = prevP;       // new head of (reversed) linked LinkedList
+    first = prevP;
 }
 
 ostream& operator<<(ostream& out, const LinkedList& aLinkedList) {

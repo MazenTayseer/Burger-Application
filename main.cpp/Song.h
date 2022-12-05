@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "Playlist.h"
 using namespace std;
 
 // Song_h
@@ -24,6 +25,10 @@ public:
 	void pauseSong();
 
 	void resumeSong();
+
+	void nextSong(Song song, Playlist currentList);
+
+	void previousSong(Song song, Playlist currentList);
 
 	string getName();
 

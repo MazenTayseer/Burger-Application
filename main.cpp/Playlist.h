@@ -34,6 +34,8 @@ public:
 
 	string getPlaylistName();
 
+	Doublelinked getList();
+
 };
 
 #endif // PlayList_h 

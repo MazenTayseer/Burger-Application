@@ -28,6 +28,8 @@ public:
 
 	void edit(int index1, int index2);
 
+	Doublelinked getList();
+
 };
 
 #endif // Likes_h 

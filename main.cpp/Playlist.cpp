@@ -31,3 +31,7 @@ void Playlist::DeletePlaylist() {
 string Playlist::getPlaylistName() {
 	return name;
 }
+
+Doublelinked Playlist::getList() {
+	return list;
+}
