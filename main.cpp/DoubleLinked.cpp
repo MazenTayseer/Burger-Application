@@ -213,9 +213,11 @@ void Doublelinked::swap(int index1, int index2) {
 void Doublelinked::display(ostream& out) const
 {
     Doublelinked::NodePointer ptr = first;
+    int index = 1;
     while (ptr != 0)
     {
-        out << ptr->data.getName() << "  ";
+        out << index << ". " << ptr->data.getName() << " - " << ptr->data.getDuration() << endl;
+        index += 1;
         ptr = ptr->next;
     }
 }

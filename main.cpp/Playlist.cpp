@@ -4,7 +4,7 @@ Playlist::Playlist(string PlaylistName): name(PlaylistName), size(0), list()
 {}
 
 void Playlist::addToPlaylist(Song song) {
-	list.push_back(*new Song(song.getName(), song.getDuration()));
+	list.push_back(*new Song(song.getInputName(), song.getName(), song.getDuration()));
 }
 
 void Playlist::deleteFromPlaylist(int index) {

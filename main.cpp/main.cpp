@@ -4,6 +4,7 @@
 
 #include "Account.h"
 #include "DoubleLinked.h"
+#include "Song.h"
 
 
 using namespace std;
@@ -11,13 +12,17 @@ using namespace std;
 // Queue: Play next ,Play later
 
 vector<Account> accounts;
+Account active("NEW", "NEW");
+Doublelinked allSongsList;
+
 bool signUp(string username, string password);
 bool logIn(string username, string password);
+void InitializeSongs();
 void songList();
 
 int main()
 {
-
+	InitializeSongs();
 	cout << "WELCOME TO BURGER\n==================" << endl;
 	
 	welcomeScreen: {
@@ -54,6 +59,12 @@ int main()
 				goto welcomeScreen;
 			}
 			else {
+				for (int i = 0; i < accounts.size(); i++) {
+					if (username == accounts[i].getUsername()) {
+						active = accounts[i];
+						break;
+					}
+				}
 				goto dashboard;
 			}
 			break;
@@ -67,6 +78,7 @@ int main()
 	dashboard: {
 		cout << "Choose a number to perform a task:\n";
 		cout << "1 - See songs list\n";
+		cout << "2 - Play Song\n";
 
 		int choice;
 		cin >> choice;
@@ -76,31 +88,20 @@ int main()
 			songList();
 			goto dashboard;
 			break;
-
 		case 2:
-			mciSendString("play DripTooHard.mp3", NULL, 0, NULL);
-			while (true) {
-				int command;
-				cout << "1 - Pause" << endl;
-				cout << "2 - Resume" << endl;
-				cout << "3 - play" << endl;
-				cin >> command;
+			cout << "Choose a number to play a song:\n";
+			songList();
+			int num;
+			cin >> num;
 
-				if (command == 1) {
-					mciSendString("pause DripTooHard.mp3", NULL, 0, NULL);
-				}
-				else if (command == 2) {
-					mciSendString("resume DripTooHard.mp3", NULL, 0, NULL);
-				}
-				else {
-					cout << "WRONG INPUT" << endl;
-				}
-			}
+			allSongsList.get(num - 1).playSong();
 			goto dashboard;
 			break;
 		}
 
 	}
+
+
 
 }
 
@@ -131,8 +132,15 @@ bool logIn(string username, string password) {
 
 void songList() {
 	cout << "==================" << endl;
-	cout << "1 - Drip Too Hard" << endl;
+	allSongsList.display(cout);
 	cout << "==================" << endl;
+}
+
+void InitializeSongs() {
+	allSongsList.push_back(*new Song("DripTooHard", "Drip too hard", "02:35"));
+	allSongsList.push_back(*new Song("Man7os", "Man7os", "04:06"));
+	allSongsList.push_back(*new Song("Skerty", "Skerty", "03:31"));
+	allSongsList.push_back(*new Song("Tharthara", "Tharthara", "03:12"));
 }
 
 

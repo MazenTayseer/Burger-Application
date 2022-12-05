@@ -1,8 +1,10 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 #include "Likes.h"
 #include "LinkedList.h"
+
 using namespace std;
 
 // Account_h

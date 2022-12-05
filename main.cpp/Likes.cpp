@@ -4,7 +4,7 @@ Likes::Likes() : name("Likes"), size(0), list()
 {}
 
 void Likes::addToLikes(Song song) {
-	list.push_back(*new Song(song.getName(), song.getDuration()));
+	list.push_back(*new Song(song.getInputName(), song.getName(), song.getDuration()));
 }
 
 void Likes::deleteFromLikes(int index) {

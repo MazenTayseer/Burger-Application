@@ -10,11 +10,12 @@ using namespace std;
 class Song
 {
 private:
+	string inputName;
 	string name;
-	int duration;
+	string duration;
 
 public:
-	Song(string name, int duration);
+	Song(string inputName, string name, string duration);
 
 	void playSong();
 
@@ -24,7 +25,9 @@ public:
 
 	string getName();
 
-	int getDuration();
+	string getDuration();
+
+	string getInputName();
 
 	//void stopSong();
 };

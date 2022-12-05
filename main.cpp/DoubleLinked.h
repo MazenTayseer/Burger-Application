@@ -24,7 +24,7 @@ private:
         //------ Node OPERATIONS
         //-- Default constrctor: initializes next member to Node()
         Node()
-            : next(0), previous(0)
+            : next(0), previous(0), data("NEW", "NEW", "00:00")
         {}
 
         //-- Explicit-value constructor:  initializes data member to dataValue

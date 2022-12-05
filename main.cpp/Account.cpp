@@ -17,6 +17,7 @@ void Account::createPlaylist(string name) {
 	playlists.push_back(newPlaylist);
 }
 
+
 Playlist Account::accessPlaylist(int index){
 	Playlist currentPL = playlists.get(index);
 	return currentPL;
